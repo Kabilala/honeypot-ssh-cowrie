@@ -1,0 +1,117 @@
+[honeypot]
+# Change the hostname to something believable but not matching your real servers
+hostname = svr01-web-prod
+
+# The reported SSH server version
+ssh_version = SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.5
+
+# Change the reported OS
+report_os = Ubuntu 20.04
+
+# Set believable credentials that attackers might try
+auth_class = cowrie.ssh.userauth.UsernamePasswordWithTokens
+auth_failed_only = false
+
+# Delay after failed authentication attempt (makes brute forcing harder)
+auth_failure_delay = 3.0
+
+# Enable all session interaction
+interact_enabled = true
+
+# Create more realistic filesystem
+pool_path = share/cowrie/pool
+
+# Set the timezone
+timezone = UTC+1
+
+# Record terminal sessions as UML-compatible format
+# This creates a text file in the format that UML's host console uses
+# output_uml = true
+
+[ssh]
+enabled = true
+# Use 'listen_endpoints' to further customize IP:port combinations
+listen_endpoints = tcp:2222:interface=0.0.0.0
+# Disable insecure key exchange methods
+key_algorithms = ssh-rsa, ssh-ed25519
+# Allow direct-tcpip forwarding (allowing attackers to use the honeypot as a proxy)
+forwarding = true
+# Enable SFTP functionality
+sftp_enabled = true
+
+[telnet]
+# We'll disable telnet for our honeypot as we're focusing on SSH
+enabled = false
+
+# === Logging Configuration ===
+
+[output_jsonlog]
+enabled = true
+logfile = var/log/cowrie/cowrie.json
+epoch_timestamp = false
+
+[output_textlog]
+enabled = true
+logfile = var/log/cowrie/cowrie.log
+
+# MySQL output - enable if you want to use a database
+[output_mysql]
+enabled = false
+# Configure if you want to use MySQL for logging
+host = localhost
+database = cowrie
+username = cowrie
+password = super_secret_password
+port = 3306
+debug = false
+
+# Elasticsearch output - useful for integration with ELK stack
+[output_elasticsearch]
+enabled = false
+host = localhost
+port = 9200
+index = cowrie
+# Use the type to differentiate multiple honeypots 
+type = cowrie
+
+# Send alert emails when certain events happen
+[output_email]
+enabled = false
+# Enable to receive emails when an attacker downloads a file or executes a command
+# alert_credentials = enable
+# alert_command = enable
+# alert_file_download = enable
+from = honeypot@example.org
+to = security@example.org
+smtp_host = localhost
+smtp_port = 25
+# smtp_username = username  # For authenticated email
+# smtp_password = password  # For authenticated email
+# smtp_use_tls = true  # For secure connection
+
+# === Advanced Honeypot Configuration ===
+
+[shell]
+# Enable extended interactive commands for a more realistic experience
+# This loads additional commands from data/commands.json
+enabled = true
+
+[proxy]
+# Enable if you want to use Cowrie as a proxy to a real SSH server
+# This permits studying an attack against a real server while maintaining control
+enabled = false
+backend_ssh_host = 192.168.1.20
+backend_ssh_port = 22
+
+[output_virustotal]
+# Enable if you want to automatically submit downloaded files to VirusTotal
+enabled = false
+api_key = YOUR_API_KEY
+upload = true
+debug = false
+
+[output_slack]
+# Enable for Slack notifications
+enabled = false
+channel = channel_that_receives_notifications
+token = slack_token_for_your_bot
